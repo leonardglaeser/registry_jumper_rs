@@ -6,6 +6,12 @@ use std::ptr::null_mut;
 use windows::{core, s, w, Win32::System::Registry::*};
 use windows::Win32::Foundation::{NO_ERROR, WIN32_ERROR};
 
+//TODO:
+// trailing slash
+// whitespace
+// check for admin permissions at start
+// open and close regedit to refresh?! find better way for already opened
+// How does it work with sysinternals? Not completely sure if its using
 
 fn main() -> Result<(), WIN32_ERROR> {
     let args: Vec<_> = env::args().collect();
